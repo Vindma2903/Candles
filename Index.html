@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Интернет магазин эко - свечей Moon</title>
+  </head>
+  <link rel="stylesheet" href="Css/Style.css">
+  <body>
+
+<a href="#">Регистрация</a>
+<a href="#">Авторизация</a>
+
+
+
+<?php
+
+USE candlebd;
+
+SELECT * FROM users;
+
+$result = mysql_query($sql_select);
+$row = mysql_fetch_array($result);
+do
+{
+	printf("<p>Пользователь: " .$row['first_name'] . " " .$row['last_name'] ."</p>
+	<p><i>Контактные данные</i></p><p>E-mail: " .$row['email'] . "</p><p>Facebook: " .$row['facebook'] . "</p>---------<br/>"
+	);
+}
+
+
+
+
+      ?>
+
+
+
+  </body>
+</html>
